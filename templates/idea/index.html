@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ideas</title>
+</head>
+<body>
+    <strong>list of Ideas:</strong>
+    {% if idea %}
+        <ul>
+            {% for i in idea %}
+                {% if i.available %}
+                    <li>
+                        {{ i.title }}
+
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>No Idea Found</strong>
+    {% endif %}
+</body>
+</html>
